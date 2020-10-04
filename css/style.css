@@ -1006,70 +1006,70 @@
     margin-right: 15px;
     margin-left: 15px;
     }
-    .card {
+  .card {
       width: 100%;
       flex-direction: column;
       border-bottom: 4px solid #eeeeee;
       margin-bottom: 36px;
     }
-    .card:last-child {
+  .card:last-child {
       border-bottom: 0;
     }
-    .card-img {
+  .card-img {
       width: 100%;
       height: auto;
       background-color: #eff6f1;
     }
-    .tegs-list-item {
+  .tegs-list-item {
       margin-top: 16px;
       margin-bottom: 16px;
     }
-    .description {
+  .description {
       margin-left: 0;
       width: 100%;
     }
-    .header-card {
+  .header-card {
       max-width: 100%;
       margin: 0;
     }
-    .header-link {
+  .header-link {
       width: 100%;
     }
-    .author-time {
+  .author-time {
       margin-top: 22px;
       margin-bottom: 22px;
     }
-    .text-card {
+  .text-card {
       width: 100%;
       margin-bottom: 22px;
     }
-    .post {
+  .post {
       width: 100%;
       height: auto;
     }
-    .description-post {
+  .description-post {
       width: 100%;
     }
-    .header-post {
+  .header-post {
       width: 100%;
     }
-    .search {
+  .search {
       width: 100%;
     }
-    .input-search {
+  .input-search {
       width: 82%;
     }
-    .button-search {
+  .button-search {
       width: 18%;
       height: auto;
     }
-    .input-mailing {
+  .input-mailing {
       width: 100%;
     } 
-    .button-subscribe {
+  .button-subscribe {
       width: 100%;
     }
-    .topic-list-item {
+  .topic-list-item {
       width: 100%;
       }
     .products {
@@ -1093,4 +1093,51 @@
     .widget-socials {
       width: 100%;
     }
+    .popup_container {
+      width: 92vw; /*ширина всё равно выходит за границы области просмотра*/
+      background-color: #ffffff;
+      padding: 28px 24px;
+    }
+    .label_header {
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+  .select {
+   width: 100%;
+   }
+   .desired_content {
+    padding: 17px;
+    width: 100%;
+  }
+  .send {
+    width: 100%;
+  }
+  .popup__close::after {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
+    top: -35px;
+    right: 1px;
+  }
+  
+  
 }
+@media (orientation: landscape) and (max-width: 640px) {
+  .trend_cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .trend_card {
+    width: calc(50% - 5px);
+    margin-right: 5px;
+    margin-top: 0;
+  }
+  .trend_card:nth-child(even) {
+    margin-right: 0px;
+  }
+  .trend_card:nth-child(4n+0) {
+    margin-right: 0;
+  }
+  }
