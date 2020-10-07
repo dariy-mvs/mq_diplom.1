@@ -13,7 +13,7 @@
           <nav class="menu">
             
             <label class="menu_toggle display_checkbox" for="menu_check"></label>
-            <input type="checkbox" class="menu_check" name="menu_check">    
+            <input type="checkbox" class="menu_check" id="menu_check">    
             <ul class="menu-list">
               <li class="menu-list-item">
                 <a class="menu-link" href="#0">главная </a></li>
@@ -271,7 +271,7 @@
             <span class="old_price">1000 ₽</span>
             <span class="new_price">800 ₽</span>
           </div>
-            <button class="shop">в магазин</button>
+            <a href="#0" class="shop">в магазин</a>
           </div>
           </div>
             </div>
@@ -289,7 +289,7 @@
               <span class="old_price">  </span>
             <span class="new_price">3500 ₽</span>
           </div>
-            <button class="shop">в магазин</button>
+            <a href="#0" class="shop">в магазин</a>
           </div>
           </div>
           </div>
@@ -307,7 +307,7 @@
             <span class="old_price">500 ₽</span>
             <span class="new_price">400 ₽</span>
             </div>
-            <button class="shop">в магазин</button>
+            <a href="#0" class="shop">в магазин</a>
             </div>
           </div>
             </div>
@@ -336,7 +336,7 @@
       <div class="popup hidden">
         <div class="popup_container">
           <h2 class="popup_header header-link">ваш фидбэк</h2>
-          <div class="feedback">
+          <form class="feedback">
              <label class="select-group">
               <span class="label_header">Как часто вы заходите на сайт?</span>
               <select class="select">
@@ -346,7 +346,7 @@
                 <option value="Несколько раз в год">Несколько раз в год</option>
               </select>
             </label>
-            <label class="radio-subscribe">
+            <div class="radio-subscribe">
               <span class="label_header">Вы подписаны на e-mail рассылку?</span>
               <label class="radio_subscribe_">
               <input class="radio-subscribe_input" type="radio" name="radio_subscribe"><span class="radio_subscribe_text">Да</span>
@@ -354,7 +354,7 @@
             <label class="radio_subscribe_">
               <input type="radio" class="radio-subscribe_input" name="radio_subscribe"><span class="radio_subscribe_text">Нет</span>
             </label>
-            </label>
+            </div>
             
             <label class="desired_content_label">
               <span class="label_header">Расскажите, какой контент вы хотели бы видеть
@@ -362,7 +362,7 @@
                 <textarea class="desired_content" placeholder="Может, больше рецептов?"></textarea>
             </label>
             <button type="submit" class="send">отправить</button>
-          </div>
+          </form>
           <label class="close_button">
         <button class="popup__close" type="button">Закрыть окно</button>
       </label>
