@@ -140,7 +140,7 @@
     display: flex;
     align-items: flex-end;
     box-sizing: border-box;
-    width: calc(25% - 12px);
+    width: calc((100% - 12px) / 4);
     height: 320px;
     background-color:#eff6f1;
     background-repeat: no-repeat;
@@ -177,9 +177,7 @@
     opacity: 0.6;}
   .trend {
     border: 3px solid #b59f5b;
-    padding-top: 40px;
-    padding-bottom: 34px;
-    padding-left: 34px;
+    padding: 40px 34px 34px 34px;
     position: relative;
     z-index: 2;
     }
@@ -500,7 +498,7 @@
   }
   .product_img {
     width: 300px;
-    height: 205px;
+    height: auto;
     margin-bottom: -30px;
     position: relative;
     z-index: 2;
@@ -553,8 +551,10 @@
   margin-top: -7px;
  }
  .shop {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   box-sizing: border-box;
   border: 0;
   font-family: OpenSans;
@@ -582,8 +582,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 5.6%;
-    width: 29%;
+    margin-right: 65px;
+    width: calc((100% - 130px) / 3);
     justify-content: center;
   }
 .product:last-child {
@@ -817,7 +817,7 @@
   .trend_cards {
     flex-wrap: wrap;}
   .trend_card {
-    width: calc(50% - 5px);
+    width: calc((100% - 5px) / 2);
     margin-right: 5px;
     margin-top: 5px;
   }
@@ -908,15 +908,16 @@
     width: 100%;
     flex-wrap: wrap;
   }
+  .product_img {
+    width: 293px;
+  }
   .product {
-    width: calc(50% - 132px);
-    margin-right: 26px;
-    margin-left: 33px;
+    width: calc((100% - 23px) / 2);
     margin-top: 30px;
+    margin-right: 0;
   }
   .product:nth-child(even) {
-    margin-right: 33px;
-    margin-left: 0;
+    margin-left: 23px;
   }
   footer {
     width: calc(100% - 70px);
@@ -983,7 +984,7 @@
   .menu-list {
     display: none;
   }
-  .menu_check:checked + ul.menu-list { /*теоретически это должно открывать меню при нажатии на "бургер". Но, увы, не открывает((*/
+  .menu_check:checked + ul.menu-list { 
     display: flex;
   }
   .trend_cards {
@@ -1077,7 +1078,7 @@
       flex-wrap: wrap;
     }
     .product {
-      width: calc(100% - 15px);
+      width: calc(100% - 30px);
       margin-right: 15px;
       margin-left: 15px;
       margin-top: 15px;
@@ -1124,13 +1125,13 @@
   
   
 }
-@media (orientation: landscape) and (max-width: 640px) {
+@media (orientation: landscape) and (max-height: 640px) {
   .trend_cards {
     flex-direction: row;
     flex-wrap: wrap;
   }
   .trend_card {
-    width: calc(50% - 5px);
+    width: calc((100% - 5px) / 2);
     margin-right: 5px;
     margin-top: 0;
   }
