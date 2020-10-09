@@ -497,11 +497,14 @@
     margin-top: 25px;
   }
   .product_img {
-    width: 300px;
+    width: 100%;
     height: auto;
     margin-bottom: -30px;
     position: relative;
     z-index: 2;
+  }
+  picture {
+    width: 90%;
   }
   .box_product {
    border: 3px solid #b59f5b;
@@ -811,7 +814,7 @@
   .menu-list {
     display: none;
   }
-  .menu_check:checked + ul.menu-list { /*теоретически это должно открывать меню при нажатии на "бургер". Но, увы, не открывает((*/
+  .menu_check:checked + ul.menu-list { 
     display: flex;
   }
   .trend_cards {
@@ -848,7 +851,7 @@
     height: auto;
     background-color: #eff6f1;
   }
-  .tegs-list-item {
+  .card-tegs {
     margin-top: 16px;
     margin-bottom: 16px;
   }
@@ -908,9 +911,6 @@
     width: 100%;
     flex-wrap: wrap;
   }
-  .product_img {
-    width: 293px;
-  }
   .product {
     width: calc((100% - 23px) / 2);
     margin-top: 30px;
@@ -928,9 +928,9 @@
     width: 100%;
   }
 }
-@media (orientation: landscape) and (min-width: 641px) and (max-width: 1200px) {
+@media (orientation: landscape) and (min-height: 641px) and (max-width: 1200px) {
   .trend_card {
-    width: calc(25% - 15px);
+    width: calc((100% - 15px) / 4);
     margin-right: 5px;
     margin-top: 0;
   }
@@ -940,9 +940,12 @@
   .trend_card:nth-child(4n+0) {
     margin-right: 0;
   }
+  .trend {
+    padding: 10px 20px 30px 20px;
+  }
   .product {
-    width: 29%;
-  margin-left: 0;
+    width: calc((100% - 66px) / 3);
+    margin-left: 0;
   }
 }
 @media (max-width: 640px) {
@@ -967,6 +970,8 @@
   h1 {
     width: 74%;
     height: auto;
+    font-size: 26px;
+    line-height: 36px;
   }
   label.display_checkbox {
     display: flex;
@@ -1002,6 +1007,10 @@
     flex-direction: column;
     width: 100%;
   }
+  .header-trend {
+    font-size: 17px;
+    line-height: 22px;
+  }
   .col, .sidebar {
     width: calc(100% - 30px);
     margin-right: 15px;
@@ -1021,7 +1030,7 @@
       height: auto;
       background-color: #eff6f1;
     }
-  .tegs-list-item {
+  .card-tegs {
       margin-top: 16px;
       margin-bottom: 16px;
     }
@@ -1095,7 +1104,7 @@
       width: 100%;
     }
     .popup_container {
-      width: 92vw; /*ширина всё равно выходит за границы области просмотра*/
+      width: 92%; 
       background-color: #ffffff;
       padding: 28px 24px;
     }
@@ -1134,6 +1143,10 @@
     width: calc((100% - 5px) / 2);
     margin-right: 5px;
     margin-top: 0;
+    margin-bottom: 5px;
+  }
+  .content {
+    margin-top: 45px;
   }
   .trend_card:nth-child(even) {
     margin-right: 0px;
